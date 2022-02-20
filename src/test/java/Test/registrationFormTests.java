@@ -42,10 +42,11 @@ public class registrationFormTests {
         $("#city").click();
         $("#stateCity-wrapper").$(Selectors.byText("Jaipur")).click();
         $("#submit").click();
-        sleep(5000);
 
         $("#example-modal-sizes-title-lg").shouldHave(Condition.text("Thanks for submitting the form"));
-        $(".table-responsive").$(Selectors.byText("Student Name"))
-                .parent().shouldHave(Condition.text("Testing First Name Testing Last Name"));
+        $(".table-responsive").$(Selectors.byText("Student Name")).parent().shouldHave(Condition.text("Testing First Name Testing Last Name"));
+        $(".table-responsive").$(Selectors.byText("Student Email")).parent().shouldHave(Condition.text("Testmail@test.com"));
+        $(".table-responsive").$(Selectors.byText("Gender")).parent().shouldHave(Condition.text("Male"));
+        $(".table-responsive").$(Selectors.byText("Mobile")).parent().shouldHave(Condition.text("Male"));
     }
 }
