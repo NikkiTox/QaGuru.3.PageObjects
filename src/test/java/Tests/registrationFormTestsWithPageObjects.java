@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPages;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.*;
 
 public class registrationFormTestsWithPageObjects extends TestBase {
@@ -14,6 +15,10 @@ public class registrationFormTestsWithPageObjects extends TestBase {
     String userEmail = "Testmail@test.com";
     String Gender = "Male";
     String phoneNumber = "1234567888";
+    String day = "5";
+    String dayCheck = "05";
+    String month = "March";
+    String year = "1994";
     String subjects = "Commerce";
     String hobby = "Music";
     String picture = "1.png";
@@ -21,7 +26,7 @@ public class registrationFormTestsWithPageObjects extends TestBase {
     String state = "NCR";
     String city = "Delhi";
     String button = "Submit";
-
+    String checkTitle = "Thanks for submitting the form";
     @Test
     void successFillTest() {
         registrationPages.openPage()
@@ -30,25 +35,26 @@ public class registrationFormTestsWithPageObjects extends TestBase {
                 .userEmailInput(userEmail)
                 .genterWrapperButton(Gender)
                 .phoneNumberInput(phoneNumber)
-                .setBirthDate("5", "March", "1994")
+                .setBirthDate(day, month, year)
                 .setSubjectsInput(subjects)
                 .setHobbyInput(hobby)
                 .uploadPicture(picture)
                 .setCurrentAddress(address)
                 .chooseStateInput(state)
                 .chooseCityInput(city)
-                .submitButton(button);
-        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+                .submitButton(button)
+                .checkRegistrationForm(checkTitle);
         registrationPages
-                .checkForm("Student Name", "Testing First Name Testing Last Name")
-                .checkForm("Student Email", "Testmail@test.com")
-                .checkForm("Gender", "Male")
-                .checkForm("Mobile", "1234567888")
-                .checkForm("Date of Birth", "Commerce")
-                .checkForm("Subjects", "Music")
-                .checkForm("Picture", "Picture")
-                .checkForm("Address", "Testograd")
-                .checkForm("State and City", "NCR" + "Delhi");
+                .checkForm("Student Name", firstName +" "+lastName)
+                .checkForm("Student Email", userEmail)
+                .checkForm("Gender", Gender)
+                .checkForm("Mobile", phoneNumber)
+                .checkForm("Date of Birth", dayCheck + " " + month + "," + year)
+                .checkForm("Subjects", subjects)
+                .checkForm("Hobbies", hobby)
+                .checkForm("Picture", picture)
+                .checkForm("Address", address)
+                .checkForm("State and City", state + " " + city);
 
     }
 }

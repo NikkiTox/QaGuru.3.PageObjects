@@ -34,7 +34,7 @@ public class RegistrationPages {
             chooseStateInput = $("#stateCity-wrapper"),
             chooseCityInput = $("#stateCity-wrapper"),
             submitButton = $("#submit"),
-
+            checkRegistrationForm = $("#example-modal-sizes-title-lg"),
             resultsTable = $(".table-responsive");
 
 
@@ -120,9 +120,10 @@ public class RegistrationPages {
         return this;
     }
 
-    //public void setFirstNameInput(SelenideElement firstNameInput) {
-    //    this.firstNameInput = firstNameInput;
-   // }
+    public RegistrationPages checkRegistrationForm (String confirmTitle){
+        checkRegistrationForm.shouldHave(text(confirmTitle));
+        return this;
+    }
 
     public RegistrationPages checkForm (String fieldName, String value) {
         resultsTable.$(byText(fieldName))
