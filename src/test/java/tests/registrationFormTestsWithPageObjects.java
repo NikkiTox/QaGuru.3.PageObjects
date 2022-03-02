@@ -1,15 +1,13 @@
-package Tests;
+package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPages;
+import pages.registrationPages;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 
-public class registrationFormTestsWithPageObjects extends TestBase {
+public class registrationFormTestsWithPageObjects extends testBase {
 
-    RegistrationPages registrationPages = new RegistrationPages();
+    pages.registrationPages registrationPages = new registrationPages();
     String firstName = "Testing First Name";
     String lastName = "Testing Last Name";
     String userEmail = "Testmail@test.com";
@@ -25,7 +23,6 @@ public class registrationFormTestsWithPageObjects extends TestBase {
     String address = "Testograd";
     String state = "NCR";
     String city = "Delhi";
-    String button = "Submit";
     String checkTitle = "Thanks for submitting the form";
     @Test
     void successFillTest() {
@@ -34,16 +31,17 @@ public class registrationFormTestsWithPageObjects extends TestBase {
                 .setLastNameInput(lastName)
                 .userEmailInput(userEmail)
                 .genterWrapperButton(Gender)
-                .phoneNumberInput(phoneNumber)
-                .setBirthDate(day, month, year)
+                .setPhoneNumber(phoneNumber);
+        $("#dateOfBirthInput").click();
+                registrationPages.setBirthDate(day, month, year)
                 .setSubjectsInput(subjects)
                 .setHobbyInput(hobby)
                 .uploadPicture(picture)
                 .setCurrentAddress(address)
                 .chooseStateInput(state)
-                .chooseCityInput(city)
-                .submitButton(button)
-                .checkRegistrationForm(checkTitle);
+                .chooseCityInput(city);
+        $("#submit").click();
+                registrationPages.checkRegistrationForm(checkTitle);
         registrationPages
                 .checkForm("Student Name", firstName +" "+lastName)
                 .checkForm("Student Email", userEmail)
