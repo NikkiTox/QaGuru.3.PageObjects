@@ -1,13 +1,13 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.registrationPages;
+import pages.RegistrationPages;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class registrationFormTestsWithPageObjects extends testBase {
+public class RegistrationFormTestsWithPageObjects extends TestBase {
 
-    pages.registrationPages registrationPages = new registrationPages();
+    RegistrationPages registrationPages = new RegistrationPages();
     String firstName = "Testing First Name";
     String lastName = "Testing Last Name";
     String userEmail = "Testmail@test.com";
@@ -31,16 +31,15 @@ public class registrationFormTestsWithPageObjects extends testBase {
                 .setLastNameInput(lastName)
                 .userEmailInput(userEmail)
                 .genterWrapperButton(Gender)
-                .setPhoneNumber(phoneNumber);
-        $("#dateOfBirthInput").click();
-                registrationPages.setBirthDate(day, month, year)
+                .setPhoneNumber(phoneNumber)
+                .setBirthDate(day, month, year)
                 .setSubjectsInput(subjects)
                 .setHobbyInput(hobby)
-                .uploadPicture(picture)
+                .uploadPicture()
                 .setCurrentAddress(address)
                 .chooseStateInput(state)
-                .chooseCityInput(city);
-        $("#submit").click();
+                .chooseCityInput(city)
+                .clickSubmit();
                 registrationPages.checkRegistrationForm(checkTitle);
         registrationPages
                 .checkForm("Student Name", firstName +" "+lastName)

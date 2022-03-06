@@ -1,18 +1,24 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
-public class registrationFormTestBaseTests extends testBase {
+public class RegistrationFormTests {
 
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
+    }
 
     @Test
     void successFillTest() {
@@ -29,7 +35,7 @@ public class registrationFormTestBaseTests extends testBase {
         $("[aria-label$='March 5th, 1994']").click();
         $("#subjectsInput").setValue("Commerce").pressEnter();
         $("#hobbiesWrapper").$(Selectors.byText("Music")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/1.png"));
+        $("#uploadPicture").uploadFile (new File("src/test/resources/1.png"));
         $("#currentAddress").setValue("Testograd");
         $("#state").scrollTo().click();
         $("#stateCity-wrapper").$(Selectors.byText("Rajasthan")).click();

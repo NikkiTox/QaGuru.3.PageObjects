@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9362e45-3709-4334-a420-ebaff4a20fbb" name="Changes" comment="edits have been made for homework #3" />
+    <list default="true" id="a9362e45-3709-4334-a420-ebaff4a20fbb" name="Changes" comment="edits have been made for homework #3">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/Tests/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/Tests/TestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTestBaseTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTestBaseTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTestsWithPageObjects.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/Tests/registrationFormTestsWithPageObjects.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pages/RegistrationPages.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pages/RegistrationPages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pages/components/CalendarComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pages/components/CalendarComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pages/components/CityComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pages/components/CityComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pages/components/StateComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pages/components/StateComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/components/calendarComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/components/CalendarComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/components/cityComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/components/CityComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/components/stateComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/components/StateComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/registrationPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registrationFormTestBaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTestBaseTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registrationFormTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registrationFormTestsWithPageObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTestsWithPageObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/testBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +45,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,8 +75,8 @@
       <recent name="G:\AQA\QaGuru.3.PageObjects" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.registrationFormTestsWithPageObjects">
-    <configuration name="registrationFormTestsWithPageObjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegistrationFormTestsWithPageObjects.successFillTest">
+    <configuration name="RegistrationFormTestsWithPageObjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PageObjects.test" />
       <extension name="coverage">
         <pattern>
@@ -53,13 +85,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.registrationFormTestsWithPageObjects" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegistrationFormTestsWithPageObjects" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="registrationFormTestsWithPageObjects.successFillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationFormTestsWithPageObjects.successFillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PageObjects.test" />
       <extension name="coverage">
         <pattern>
@@ -68,7 +100,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.registrationFormTestsWithPageObjects" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegistrationFormTestsWithPageObjects" />
       <option name="METHOD_NAME" value="successFillTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -77,8 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.registrationFormTestsWithPageObjects" />
-        <item itemvalue="JUnit.registrationFormTestsWithPageObjects.successFillTest" />
+        <item itemvalue="JUnit.RegistrationFormTestsWithPageObjects.successFillTest" />
+        <item itemvalue="JUnit.RegistrationFormTestsWithPageObjects" />
       </list>
     </recent_temporary>
   </component>

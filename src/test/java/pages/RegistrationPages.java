@@ -2,9 +2,11 @@ package pages;
 
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
-import pages.components.calendarComponent;
-import pages.components.cityComponent;
-import pages.components.stateComponent;
+import pages.components.CalendarComponent;
+import pages.components.CityComponent;
+import pages.components.StateComponent;
+
+
 
 
 
@@ -13,13 +15,13 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class registrationPages {
+public class RegistrationPages {
     //components
-    private pages.components.calendarComponent calendarComponent = new calendarComponent();
-    private stateComponent StateComponent = new stateComponent();
-    private cityComponent CityComponent = new cityComponent();
+    private final CalendarComponent CalendarComponent = new CalendarComponent();
+    private final StateComponent StateComponent = new StateComponent();
+    private final CityComponent CityComponent = new CityComponent();
     //locators
-    private SelenideElement
+    private final SelenideElement
             headerTitle = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
@@ -31,92 +33,98 @@ public class registrationPages {
             uploadPicture = $("#uploadPicture"),
             setCurrentAdress = $("#currentAddress"),
             checkRegistrationForm = $("#example-modal-sizes-title-lg"),
-            resultsTable = $(".table-responsive");
+            resultsTable = $(".table-responsive"),
+            submitButton = $("#submit");
 
+    private String upload = "1.png";
 
 
     //actions
-    public registrationPages openPage() {
+    public RegistrationPages openPage() {
         open("/automation-practice-form");
         headerTitle.shouldHave(text("Student Registration Form"));
 
         return this;
     }
 
-    public registrationPages setFirstNameInput(String firstName) {
+    public RegistrationPages setFirstNameInput(String firstName) {
         firstNameInput.setValue(firstName);
 
         return this;
     }
 
-    public registrationPages setLastNameInput(String lastName) {
+    public RegistrationPages setLastNameInput(String lastName) {
         lastNameInput.setValue(lastName);
 
         return this;
     }
 
-    public registrationPages userEmailInput(String userEmail) {
+    public RegistrationPages userEmailInput(String userEmail) {
         userEmailInput.setValue(userEmail);
 
         return this;
     }
 
-    public registrationPages genterWrapperButton(String chooseGender) {
+    public RegistrationPages genterWrapperButton(String chooseGender) {
         genterWrapperButton.$(byText(chooseGender)).click();
 
         return this;
     }
 
-    public registrationPages setPhoneNumber(String phoneNumber) {
+    public RegistrationPages setPhoneNumber(String phoneNumber) {
         setPhoneNumber.setValue(phoneNumber);
 
         return this;
     }
 
-    public registrationPages setBirthDate(String day, String month, String year) {
-        calendarComponent.setDate(day, month, year);
+    public RegistrationPages setBirthDate(String day, String month, String year) {
+        CalendarComponent.setDate(day, month, year);
 
         return this;
     }
 
-    public registrationPages setSubjectsInput(String subjects) {
+    public RegistrationPages setSubjectsInput(String subjects) {
         setSubjectsInput.setValue(subjects).pressEnter();
 
         return this;
     }
 
-    public registrationPages setHobbyInput(String hobbyInput) {
+    public RegistrationPages setHobbyInput(String hobbyInput) {
         setHobbyInput.$(Selectors.byText(hobbyInput)).click();
 
         return this;
     }
 
-    public registrationPages uploadPicture(String upload) {
-        uploadPicture.uploadFromClasspath("1.png");
+    public RegistrationPages uploadPicture() {
+        uploadPicture.uploadFromClasspath(upload);
 
         return this;
     }
 
-    public registrationPages setCurrentAddress(String currentAddress){
+    public RegistrationPages setCurrentAddress(String currentAddress){
         setCurrentAdress.setValue(currentAddress);
 
         return this;
     }
-    public registrationPages chooseStateInput (String chooseState){
+    public RegistrationPages chooseStateInput (String chooseState){
         StateComponent.setState(chooseState);
         return this;
     }
-    public registrationPages chooseCityInput (String chooseCity){
+    public RegistrationPages chooseCityInput (String chooseCity){
         CityComponent.setCity(chooseCity);
         return this;
     }
+    public RegistrationPages clickSubmit (){
+     $(submitButton).click();
+       return this;
+     }
 
-    public registrationPages checkRegistrationForm (String confirmTitle){
+    public RegistrationPages checkRegistrationForm (String confirmTitle){
         checkRegistrationForm.shouldHave(text(confirmTitle));
         return this;
     }
 
-    public registrationPages checkForm (String fieldName, String value) {
+    public RegistrationPages checkForm (String fieldName, String value) {
         resultsTable.$(byText(fieldName))
                 .parent().shouldHave(text(value));
 
